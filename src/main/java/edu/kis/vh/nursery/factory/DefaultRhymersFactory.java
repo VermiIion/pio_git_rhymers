@@ -3,11 +3,11 @@ package edu.kis.vh.nursery.factory;
 import edu.kis.vh.nursery.DefaultCountingOutRhymer;
 import edu.kis.vh.nursery.FIFORhymer;
 import edu.kis.vh.nursery.HanoiRhymer;
-import edu.kis.vh.nursery.arrayStack.IntArrayStack;
+import edu.kis.vh.nursery.base_data_types.IntStack;
 
 public class DefaultRhymersFactory implements Rhymersfactory {
 
-	private IntArrayStack stack;
+	private IntStack stack;
 
 	@Override
 	public DefaultCountingOutRhymer GetStandardRhymer() {
