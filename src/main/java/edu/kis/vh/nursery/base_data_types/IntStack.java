@@ -1,6 +1,7 @@
 package edu.kis.vh.nursery.base_data_types;
 
 public interface IntStack {
+    int DEFAULT = 0;
     void push(int i);
 
     boolean isEmpty();

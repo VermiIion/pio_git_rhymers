@@ -1,17 +1,15 @@
 package edu.kis.vh.nursery;
 
-import edu.kis.vh.nursery.base_data_types.IntArrayStack;
+import edu.kis.vh.nursery.base_data_types.IntStack;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.Ignore;
 
 public class RhymersJUnitTest {
 
-	private final IntArrayStack stack = new IntArrayStack();
-
 	@Test
 	public void testCountIn() {
-		DefaultCountingOutRhymer rhymer = new DefaultCountingOutRhymer(stack);
+		DefaultCountingOutRhymer rhymer = new DefaultCountingOutRhymer();
 		int testValue = 4;
 		rhymer.countIn(testValue);
 
@@ -21,7 +19,7 @@ public class RhymersJUnitTest {
 
 	@Test
 	public void testCallCheck() {
-		DefaultCountingOutRhymer rhymer = new DefaultCountingOutRhymer(stack);
+		DefaultCountingOutRhymer rhymer = new DefaultCountingOutRhymer();
 		boolean result = rhymer.callCheck();
 		Assert.assertTrue(result);
 
@@ -34,7 +32,7 @@ public class RhymersJUnitTest {
 	@Ignore
 	@Test
 	public void testIsFull() {
-		DefaultCountingOutRhymer rhymer = new DefaultCountingOutRhymer(stack);
+		DefaultCountingOutRhymer rhymer = new DefaultCountingOutRhymer();
 		final int STACK_CAPACITY = 12;
 		for (int i = 0; i < STACK_CAPACITY; i++) {
 			boolean result = rhymer.isFull();
@@ -48,8 +46,8 @@ public class RhymersJUnitTest {
 
 	@Test
 	public void testPeekaboo() {
-		DefaultCountingOutRhymer rhymer = new DefaultCountingOutRhymer(stack);
-		final int EMPTY_STACK_VALUE = 0;
+		DefaultCountingOutRhymer rhymer = new DefaultCountingOutRhymer();
+		final int EMPTY_STACK_VALUE = IntStack.DEFAULT;
 
 		int result = rhymer.peekaboo();
 		Assert.assertEquals(EMPTY_STACK_VALUE, result);
@@ -65,8 +63,8 @@ public class RhymersJUnitTest {
 
 	@Test
 	public void testCountOut() {
-		DefaultCountingOutRhymer rhymer = new DefaultCountingOutRhymer(stack);
-		final int EMPTY_STACK_VALUE = 0;
+		DefaultCountingOutRhymer rhymer = new DefaultCountingOutRhymer();
+		final int EMPTY_STACK_VALUE = IntStack.DEFAULT;
 
 		int result = rhymer.countOut();
 		Assert.assertEquals(EMPTY_STACK_VALUE, result);

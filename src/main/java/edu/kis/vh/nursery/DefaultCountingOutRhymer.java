@@ -33,6 +33,8 @@ public class DefaultCountingOutRhymer {
 	}
 
 	protected int peekaboo() {
+		if (callCheck())
+			return IntStack.DEFAULT;
 		return stack.top();
 	}
 }

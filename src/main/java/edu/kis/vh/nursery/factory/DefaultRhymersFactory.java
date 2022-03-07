@@ -5,18 +5,18 @@ import edu.kis.vh.nursery.FIFORhymer;
 import edu.kis.vh.nursery.HanoiRhymer;
 import edu.kis.vh.nursery.base_data_types.IntStack;
 
-public class DefaultRhymersFactory implements Rhymersfactory {
+public class DefaultRhymersFactory implements RhymersFactory {
 
 	private IntStack stack;
 
 	@Override
 	public DefaultCountingOutRhymer GetStandardRhymer() {
-		return new DefaultCountingOutRhymer(stack);
+		return new DefaultCountingOutRhymer();
 	}
 
 	@Override
 	public DefaultCountingOutRhymer GetFalseRhymer() {
-		return new DefaultCountingOutRhymer(stack);
+		return new DefaultCountingOutRhymer();
 	}
 
 	@Override

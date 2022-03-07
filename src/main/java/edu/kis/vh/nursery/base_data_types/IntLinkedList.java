@@ -3,7 +3,6 @@ package edu.kis.vh.nursery.base_data_types;
 public class IntLinkedList implements IntStack {
 
 	Node last;
-	int i;
 
 	@Override
 	public void push(int i) {
@@ -36,7 +35,7 @@ public class IntLinkedList implements IntStack {
 	@Override
 	public int pop() {
 		if (isEmpty())
-			return -1;
+			return IntStack.DEFAULT;
 		int ret = last.value;
 		last = last.prev;
 		return ret;
